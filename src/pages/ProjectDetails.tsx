@@ -1,4 +1,4 @@
-import { ArrowLeft, MoreVertical, MapPin, Calendar, Users, Camera, CheckSquare } from "lucide-react";
+import { ArrowLeft, MoreVertical, MapPin, Calendar, Users, Camera, CheckSquare, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -68,7 +68,7 @@ const ProjectDetails = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-4 gap-3">
           <Link to="/photo-gallery">
             <Card className="p-4 text-center hover:bg-muted/50 transition-colors cursor-pointer">
               <Camera className="h-5 w-5 mx-auto mb-1 text-primary" />
@@ -86,6 +86,13 @@ const ProjectDetails = () => {
             <p className="text-2xl font-bold">{project.teamCount}</p>
             <p className="text-xs text-muted-foreground">Team</p>
           </Card>
+          <Link to="/timeline">
+            <Card className="p-4 text-center hover:bg-muted/50 transition-colors cursor-pointer">
+              <Clock className="h-5 w-5 mx-auto mb-1 text-primary" />
+              <p className="text-2xl font-bold">+</p>
+              <p className="text-xs text-muted-foreground">Timeline</p>
+            </Card>
+          </Link>
         </div>
       </div>
 

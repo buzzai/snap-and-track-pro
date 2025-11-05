@@ -15,6 +15,8 @@ import TaskDetail from "./pages/TaskDetail";
 import PhotoGallery from "./pages/PhotoGallery";
 import Inbox from "./pages/Inbox";
 import Settings from "./pages/Settings";
+import Timeline from "./pages/Timeline";
+import Notifications from "./pages/Notifications";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/map-location" element={<MapLocation />} />
           <Route path="/create-project" element={<CreateProject />} />
           <Route path="/project-details" element={<ProjectDetails />} />
+          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/notifications" element={<Notifications />} />
           <Route path="/invite-users" element={<InviteUsers />} />
           <Route path="/camera" element={<Camera />} />
           <Route path="/tasks" element={<Tasks />} />
