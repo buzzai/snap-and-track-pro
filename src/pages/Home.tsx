@@ -1,6 +1,8 @@
 import { Camera, MapPin, Users, ChevronRight, MoreVertical, Plus } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
+import ActionSheet from "@/components/ActionSheet";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -65,12 +67,14 @@ const Home = () => {
         {/* Team Members */}
         <div>
           <div className="flex items-center gap-4 mb-4">
-            <button className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 rounded-full border-2 border-dashed border-primary flex items-center justify-center bg-primary/5">
-                <Plus className="h-6 w-6 text-primary" />
-              </div>
-              <span className="text-xs text-primary font-medium">Invite</span>
-            </button>
+            <Link to="/invite-users">
+              <button className="flex flex-col items-center gap-2">
+                <div className="w-16 h-16 rounded-full border-2 border-dashed border-primary flex items-center justify-center bg-primary/5">
+                  <Plus className="h-6 w-6 text-primary" />
+                </div>
+                <span className="text-xs text-primary font-medium">Invite</span>
+              </button>
+            </Link>
             
             <div className="flex flex-col items-center gap-2">
               <Avatar className="w-16 h-16 bg-muted">
@@ -108,10 +112,12 @@ const Home = () => {
             <p className="text-muted-foreground text-sm mb-4">
               Photos are automatically grouped by location, so everything stays in the right place.
             </p>
-            <Button className="rounded-full" size="lg">
-              <Plus className="h-5 w-5 mr-2" />
-              Create
-            </Button>
+            <ActionSheet>
+              <Button className="rounded-full" size="lg">
+                <Plus className="h-5 w-5 mr-2" />
+                Create
+              </Button>
+            </ActionSheet>
           </Card>
         </div>
       </main>

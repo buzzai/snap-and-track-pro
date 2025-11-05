@@ -56,10 +56,12 @@ const MapView = () => {
 
         {/* New Project Button */}
         <div className="absolute bottom-24 left-1/2 -translate-x-1/2">
-          <Button className="rounded-full shadow-lg px-6" size="lg">
-            <Plus className="h-5 w-5 mr-2" />
-            New Project
-          </Button>
+          <Link to="/map-location">
+            <Button className="rounded-full shadow-lg px-6" size="lg">
+              <Plus className="h-5 w-5 mr-2" />
+              New Project
+            </Button>
+          </Link>
         </div>
       </div>
 
