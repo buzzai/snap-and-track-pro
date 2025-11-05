@@ -106,6 +106,23 @@ const Home = () => {
             ))}
           </div>
 
+          {/* Sample Project - Replace with empty state when no projects */}
+          <Link to="/project-details">
+            <Card className="p-4 hover:bg-muted/50 transition-colors mb-3">
+              <div className="flex items-start justify-between mb-2">
+                <div>
+                  <h3 className="font-semibold mb-1">Sector 132 Public Park</h3>
+                  <p className="text-sm text-muted-foreground">Sector 132, Noida</p>
+                </div>
+                <Badge variant="secondary">24 photos</Badge>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <MapPin className="h-3 w-3" />
+                <span>Created Nov 4, 2024</span>
+              </div>
+            </Card>
+          </Link>
+
           {/* Empty State */}
           <Card className="p-8 text-center bg-card">
             <h3 className="text-lg font-semibold mb-2">Ready to get started?</h3>
