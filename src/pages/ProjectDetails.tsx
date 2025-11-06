@@ -1,4 +1,4 @@
-import { ArrowLeft, MoreVertical, MapPin, Calendar, Users, Camera, CheckSquare } from "lucide-react";
+import { ArrowLeft, MoreVertical, MapPin, Calendar, Users, Camera, CheckSquare, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -65,6 +65,22 @@ const ProjectDetails = () => {
             <Calendar className="h-4 w-4" />
             <span className="text-sm">Created {project.created}</span>
           </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-2">
+          <Link to="/timeline" className="flex-1">
+            <Button variant="outline" className="w-full">
+              <Clock className="h-4 w-4 mr-2" />
+              Timeline
+            </Button>
+          </Link>
+          <Link to="/photo-gallery" className="flex-1">
+            <Button variant="outline" className="w-full">
+              <Camera className="h-4 w-4 mr-2" />
+              Gallery
+            </Button>
+          </Link>
         </div>
 
         {/* Stats */}

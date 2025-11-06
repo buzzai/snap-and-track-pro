@@ -13,6 +13,8 @@ import Camera from "./pages/Camera";
 import Tasks from "./pages/Tasks";
 import TaskDetail from "./pages/TaskDetail";
 import PhotoGallery from "./pages/PhotoGallery";
+import Timeline from "./pages/Timeline";
+import Notifications from "./pages/Notifications";
 import Inbox from "./pages/Inbox";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
@@ -36,6 +38,8 @@ const App = () => (
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/task-detail/:id" element={<TaskDetail />} />
           <Route path="/photo-gallery" element={<PhotoGallery />} />
+          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/notifications" element={<Notifications />} />
           <Route path="/inbox" element={<Inbox />} />
           <Route path="/settings" element={<Settings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
