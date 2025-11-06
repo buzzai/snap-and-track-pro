@@ -1,14 +1,21 @@
-import { Camera, MapPin, Users, ChevronRight, MoreVertical, Plus } from "lucide-react";
+import { Camera, MapPin, Users, ChevronRight, MoreVertical, Plus, Clock, CheckSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
 import ActionSheet from "@/components/ActionSheet";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const Home = () => {
+  const quickActions = [
+    { icon: Clock, label: "Timeline", path: "/timeline", color: "text-blue-500" },
+    { icon: Camera, label: "Photos", path: "/photo-gallery", color: "text-green-500" },
+    { icon: CheckSquare, label: "Tasks", path: "/tasks", color: "text-orange-500" },
+    { icon: Users, label: "Team", path: "/invite-users", color: "text-purple-500" },
+  ];
+
   const onboardingTasks = [
     { icon: MapPin, title: "Create a Project", completed: false },
     { icon: Camera, title: "Take a Photo", completed: false },
@@ -28,6 +35,25 @@ const Home = () => {
             ⚡ 10 days left!
           </Badge>
         </div>
+
+        {/* Quick Actions */}
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg">Quick Access</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-4 gap-3">
+              {quickActions.map((action) => (
+                <Link key={action.path} to={action.path}>
+                  <div className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-muted transition-colors">
+                    <action.icon className={`h-7 w-7 ${action.color}`} />
+                    <span className="text-xs font-medium text-center text-foreground">{action.label}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Getting Started Card */}
         <Card className="p-6 bg-card border-border">
