@@ -2,7 +2,8 @@ import { Camera, MapPin, Users, ChevronRight, MoreVertical, Plus, Clock, CheckSq
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
-import ActionSheet from "@/components/ActionSheet";
+import AIChatButton from "@/components/AIChatButton";
+import FloatingCreateButton from "@/components/FloatingCreateButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -155,16 +156,12 @@ const Home = () => {
             <p className="text-muted-foreground text-sm mb-4">
               Photos are automatically grouped by location, so everything stays in the right place.
             </p>
-            <ActionSheet>
-              <Button className="rounded-full" size="lg">
-                <Plus className="h-5 w-5 mr-2" />
-                Create
-              </Button>
-            </ActionSheet>
           </Card>
         </div>
       </main>
 
+      <FloatingCreateButton />
+      <AIChatButton />
       <BottomNav />
     </div>
   );
