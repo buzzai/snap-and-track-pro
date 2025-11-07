@@ -2,7 +2,6 @@ import { Camera, MapPin, Users, ChevronRight, MoreVertical, Plus, Clock, CheckSq
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
-import AIChatButton from "@/components/AIChatButton";
 import FloatingCreateButton from "@/components/FloatingCreateButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -161,7 +160,6 @@ const Home = () => {
       </main>
 
       <FloatingCreateButton />
-      <AIChatButton />
       <BottomNav />
     </div>
   );
