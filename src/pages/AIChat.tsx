@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useNavigate } from "react-router-dom";
+import BottomNav from "@/components/BottomNav";
 
 interface Message {
   id: number;
@@ -51,31 +52,33 @@ const AIChat = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-background">
+    <div className="flex flex-col h-screen bg-background pb-20">
       {/* Header */}
-      <div className="flex items-center gap-3 p-4 border-b border-border bg-card">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => navigate(-1)}
-          className="shrink-0"
-        >
-          <ArrowLeft className="h-5 w-5" />
-        </Button>
-        <Avatar className="h-10 w-10 bg-primary shrink-0">
-          <AvatarFallback className="bg-primary text-primary-foreground">
-            AI
-          </AvatarFallback>
-        </Avatar>
-        <div className="flex-1 min-w-0">
-          <h1 className="font-semibold text-lg">AI Assistant</h1>
-          <p className="text-xs text-muted-foreground truncate">Always here to help</p>
+      <header className="sticky top-0 bg-card border-b border-border z-40">
+        <div className="max-w-2xl mx-auto px-4 py-4 flex items-center gap-3">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => navigate(-1)}
+            className="shrink-0"
+          >
+            <ArrowLeft className="h-6 w-6" />
+          </Button>
+          <Avatar className="h-10 w-10 bg-primary shrink-0">
+            <AvatarFallback className="bg-primary text-primary-foreground">
+              AI
+            </AvatarFallback>
+          </Avatar>
+          <div className="flex-1 min-w-0">
+            <h1 className="font-semibold text-xl">AI Assistant</h1>
+            <p className="text-xs text-muted-foreground truncate">Always here to help</p>
+          </div>
         </div>
-      </div>
+      </header>
 
       {/* Messages */}
       <ScrollArea className="flex-1 p-4">
-        <div className="space-y-4 max-w-3xl mx-auto">
+        <div className="space-y-4 max-w-2xl mx-auto">
           {messages.map((message, index) => (
             <div
               key={message.id}
@@ -107,7 +110,7 @@ const AIChat = () => {
 
       {/* Input */}
       <div className="p-4 border-t border-border bg-card">
-        <div className="flex gap-2 max-w-3xl mx-auto">
+        <div className="flex gap-2 max-w-2xl mx-auto">
           <Input
             placeholder="Type your message..."
             value={inputValue}
@@ -120,6 +123,8 @@ const AIChat = () => {
           </Button>
         </div>
       </div>
+
+      <BottomNav />
     </div>
   );
 };

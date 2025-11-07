@@ -17,11 +17,10 @@ const Settings = () => {
 
   return (
     <div className="min-h-screen bg-background pb-20">
-      {/* Header */}
       <header className="sticky top-0 bg-card border-b border-border z-40">
         <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-bold">Lalit Shukla</h1>
+            <h1 className="text-xl font-bold">Lalit Shukla</h1>
             <ChevronDown className="h-5 w-5 text-muted-foreground" />
           </div>
           <div className="flex items-center gap-3">
@@ -56,12 +55,12 @@ const Settings = () => {
         {/* Tasks Tab Content */}
         {activeTab === "tasks" && (
           <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-            <h2 className="text-3xl font-bold mb-4">Your work here is done!</h2>
+            <h2 className="text-2xl font-bold mb-4">Your work here is done!</h2>
             <p className="text-muted-foreground mb-8">
               When you have unfinished tasks,<br />they'll show up here.
             </p>
             <Link to="/tasks" className="w-full max-w-md">
-              <Button className="w-full h-12 text-lg font-semibold">
+              <Button className="w-full h-12 text-base font-semibold">
                 Add Task
               </Button>
             </Link>
@@ -71,12 +70,12 @@ const Settings = () => {
         {/* Photos Tab Content */}
         {activeTab === "photos" && (
           <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-            <h2 className="text-3xl font-bold mb-4">No photos yet!</h2>
+            <h2 className="text-2xl font-bold mb-4">No photos yet!</h2>
             <p className="text-muted-foreground mb-8">
               Your photos will appear here<br />once you start capturing.
             </p>
             <Link to="/photo-gallery" className="w-full max-w-md">
-              <Button className="w-full h-12 text-lg font-semibold">
+              <Button className="w-full h-12 text-base font-semibold">
                 View Gallery
               </Button>
             </Link>
@@ -86,12 +85,12 @@ const Settings = () => {
         {/* Projects Tab Content */}
         {activeTab === "projects" && (
           <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-            <h2 className="text-3xl font-bold mb-4">No projects yet!</h2>
+            <h2 className="text-2xl font-bold mb-4">No projects yet!</h2>
             <p className="text-muted-foreground mb-8">
               Start your first project<br />and track your progress.
             </p>
             <Link to="/create-project" className="w-full max-w-md">
-              <Button className="w-full h-12 text-lg font-semibold">
+              <Button className="w-full h-12 text-base font-semibold">
                 Create Project
               </Button>
             </Link>
@@ -101,11 +100,11 @@ const Settings = () => {
         {/* Reports Tab Content */}
         {activeTab === "reports" && (
           <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-            <h2 className="text-3xl font-bold mb-4">No reports available!</h2>
+            <h2 className="text-2xl font-bold mb-4">No reports available!</h2>
             <p className="text-muted-foreground mb-8">
               Generate reports from your<br />projects and tasks.
             </p>
-            <Button className="w-full max-w-md h-12 text-lg font-semibold">
+            <Button className="w-full max-w-md h-12 text-base font-semibold">
               Generate Report
             </Button>
           </div>
