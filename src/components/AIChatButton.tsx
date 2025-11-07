@@ -93,19 +93,21 @@ const AIChatButton = () => {
           {/* Messages */}
           <ScrollArea className="flex-1 p-4">
             <div className="space-y-4">
-              {messages.map((message) => (
+              {messages.map((message, index) => (
                 <div
                   key={message.id}
-                  className={`flex ${
+                  className={`flex animate-fade-in ${
                     message.sender === "user" ? "justify-end" : "justify-start"
                   }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div
-                    className={`max-w-[80%] rounded-lg p-3 ${
+                    className={`max-w-[80%] rounded-lg p-3 animate-slide-in-right ${
                       message.sender === "user"
                         ? "bg-primary text-primary-foreground"
                         : "bg-muted text-foreground"
                     }`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <p className="text-sm">{message.text}</p>
                     <p className="text-xs opacity-70 mt-1">

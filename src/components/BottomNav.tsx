@@ -1,4 +1,4 @@
-import { Home, Map, Camera, Bell, User } from "lucide-react";
+import { Home, Map, Camera, MessageSquare, User } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
@@ -9,7 +9,7 @@ const BottomNav = () => {
     { icon: Home, label: "Home", path: "/" },
     { icon: Map, label: "Map", path: "/map" },
     { icon: Camera, label: "", path: "/camera", isMain: true },
-    { icon: Bell, label: "Inbox", path: "/inbox" },
+    { icon: MessageSquare, label: "AI Chat", path: "/ai-chat" },
     { icon: User, label: "My Stuff", path: "/settings" },
   ];
 

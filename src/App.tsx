@@ -17,6 +17,7 @@ import Timeline from "./pages/Timeline";
 import Notifications from "./pages/Notifications";
 import Inbox from "./pages/Inbox";
 import Settings from "./pages/Settings";
+import AIChat from "./pages/AIChat";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/inbox" element={<Inbox />} />
+          <Route path="/ai-chat" element={<AIChat />} />
           <Route path="/settings" element={<Settings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
